@@ -65,7 +65,7 @@ std::unique_ptr<VW::workspace> initialize_internal(
     auto msg = fmt::format("{}, model files = {}", e.what(), fmt::join(all->initial_regressors, ", "));
     throw VW::save_load_model_exception(e.filename(), e.line_number(), msg);
   }
-
+  std::cout << "Hello World." << std::endl;
   if (!all->quiet)
   {
     *(all->trace_message) << "Num weight bits = " << all->num_bits << std::endl;
